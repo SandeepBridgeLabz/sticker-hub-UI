@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -57,7 +57,7 @@ const routeDefinations = createRoutesFromElements(
     </Route>
   </Route>,
 );
-const appRouter = createBrowserRouter(routeDefinations);
+const appRouter = createHashRouter(routeDefinations);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
